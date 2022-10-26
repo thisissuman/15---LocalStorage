@@ -1,0 +1,33 @@
+1. Grab the classes add-items and plates.
+2. in additem add submit event listener. and create a function.
+3. to prevent the page reloading for every time we submit any item.
+add the preventDefault() method to the parameter e of the function.
+4. now take the text of the box and put it in an object. 
+5.now create an item object which is going to have texxt : item name and done  : false. 
+6.now we have to put some item into the text objet, so in order to do that we have to grab the 
+input .
+7. so grab the input by input element or [name=item]        
+8. and the grab the value of it.
+9. now put the value in object and add this.reset(); for clearing the input text each time we submit.
+10. now push this object into an empty array. so create an empoty array  first. 
+
+
+Now above we have done the data to insert in it, now lets work to prcess and show it in UI.
+
+1. create a function which will create actual html here.
+2. function populate, it needs two things.  first its needs list of plate to populate
+which is items or plates. and 2nd we need a place to put the HTML and thats called platesList.
+where we are going to pass in our itemlist(plate class grabbed constant.)
+3. set the FIRST plates to empty array, so that when the function runs it will not break
+if you are not passing anything, it will just loop over array of nothing.
+4. and why need of creating this function is because if in future if we create another 
+set of html items or another set of two differenet menu it will work fine.
+5. go inside the function take the plates and map over it. (use map functon )
+6. and return the ${plate.text} it will set to innerhtml of the plates
+7. now call the function.
+
+Now here we have to put checkbox also and link it to the label.
+
+1.So in return statement add a new input for id = "item ${i}"
+2. here in the above function in the map function we are mentioning two parameter one is plates, another is i,
+3. it will be used to track the index of each itme also to map the input with label element.
